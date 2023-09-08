@@ -1,29 +1,48 @@
 {
-	"name": "your-tribe-for-life-profile-card",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"lint": "prettier --plugin-search-dir . --check .",
-		"format": "prettier --plugin-search-dir . --write .",
-		"slicemachine": "start-slicemachine"
-	},
-	"devDependencies": {
-		"@slicemachine/adapter-sveltekit": "^0.3.14",
-		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/kit": "^1.20.4",
-		"prettier": "^2.8.0",
-		"prettier-plugin-svelte": "^2.10.1",
-		"slice-machine-ui": "^1.12.0",
-		"svelte": "^4.0.5",
-		"vite": "^4.4.2"
-	},
-	"type": "module",
-	"dependencies": {
-		"@picocss/pico": "^1.5.10",
-		"@prismicio/client": "^7.2.0",
-		"@prismicio/svelte": "^0.1.2"
-	}
+  "name": "prismicio.js",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "prettier --plugin-search-dir . --check .",
+    "format": "prettier --plugin-search-dir . --write .",
+    "slicemachine": "start-slicemachine"
+  },
+  "devDependencies": {
+    "@slicemachine/adapter-sveltekit": "^0.3.14",
+    "@sveltejs/adapter-auto": "^2.0.0",
+    "@sveltejs/kit": "^1.20.4",
+    "prettier": "^2.8.0",
+    "prettier-plugin-svelte": "^2.10.1",
+    "slice-machine-ui": "^1.12.0",
+    "svelte": "^4.0.5",
+    "vite": "^4.4.2"
+  },
+  "type": "module",
+  "dependencies": {
+    "@picocss/pico": "^1.5.10",
+    "@prismicio/client": "^7.2.0",
+    "@prismicio/helpers": "^2.3.9",
+    "@prismicio/svelte": "^0.1.2"
+  },
+  "description": "Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).",
+  "main": "svelte.config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maaike0904/your-tribe-for-life-profile-card.git"
+  },
+  "keywords": [
+    "prismicio"
+  ],
+  "author": "Maaike",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Maaike0904/your-tribe-for-life-profile-card/issues"
+  },
+  "homepage": "https://github.com/Maaike0904/your-tribe-for-life-profile-card#readme"
 }
