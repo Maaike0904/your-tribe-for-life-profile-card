@@ -4,6 +4,42 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+/**
+ * Item in *nav → nav*
+ */
+export interface NavDocumentDataNavItem {}
+
+/**
+ * Content for nav documents
+ */
+interface NavDocumentData {
+	/**
+	 * nav field in *nav*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: nav.nav[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	nav: prismic.GroupField<Simplify<NavDocumentDataNavItem>>;
+}
+
+/**
+ * nav document from Prismic
+ *
+ * - **API ID**: `nav`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NavDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<
+	Simplify<NavDocumentData>,
+	'nav',
+	Lang
+>;
+
 type VisitekaartjeDocumentDataSlicesSlice = never;
 
 /**
@@ -69,7 +105,7 @@ export type VisitekaartjeDocument<Lang extends string = string> = prismic.Prismi
 	Lang
 >;
 
-export type AllDocumentTypes = VisitekaartjeDocument;
+export type AllDocumentTypes = NavDocument | VisitekaartjeDocument;
 
 /**
  * Primary content in *Profiel → Primary*
@@ -133,6 +169,9 @@ declare module '@prismicio/client' {
 
 	namespace Content {
 		export type {
+			NavDocument,
+			NavDocumentData,
+			NavDocumentDataNavItem,
 			VisitekaartjeDocument,
 			VisitekaartjeDocumentData,
 			VisitekaartjeDocumentDataSlicesSlice,

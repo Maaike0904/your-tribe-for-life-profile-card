@@ -1,0 +1,18 @@
+{
+	"id": "nav",
+	"label": "nav",
+	"format": "custom",
+	"repeatable": false,
+	"status": true,
+	"json": {
+		"Main": {
+			"nav": {
+				"type": "Group",
+				"config": {
+					"label": "nav",
+					"fields": {}
+				}
+			}
+		}
+	}
+}
