@@ -1,0 +1,16 @@
+{
+	"id": "titleblock",
+	"type": "SharedSlice",
+	"name": "Titleblock",
+	"description": "Titleblock",
+	"variations": [
+		{
+			"id": "default",
+			"name": "Default",
+			"docURL": "...",
+			"version": "initial",
+			"description": "Default",
+			"imageUrl": ""
+		}
+	]
+}
