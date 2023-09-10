@@ -12,20 +12,15 @@
 </main>
 
 <style>
+	body {
+		margin: 0px;
+	}
+
 	main {
 		width: 100%;
 		height: 100vh;
 		display: flex;
-		background-image: linear-gradient(
-			135deg,
-			#c30505 0%,
-			#ff5151 30%,
-			#512b9e 30%,
-			#512b9e 30%,
-			#b18aff 60%,
-			#203ea8 60%,
-			#5178ff 100%
-		);
+		background-image: url(1732.jpg);
 		position: relative;
 	}
 

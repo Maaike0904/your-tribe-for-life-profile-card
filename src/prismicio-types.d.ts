@@ -160,6 +160,51 @@ type ProfielSliceVariation = ProfielSliceDefault;
 export type ProfielSlice = prismic.SharedSlice<'profiel', ProfielSliceVariation>;
 
 /**
+ * Primary content in *Titleblock → Primary*
+ */
+export interface TitleblockSliceDefaultPrimary {
+	/**
+	 * title field in *Titleblock → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: titleblock.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.RichTextField;
+
+	/**
+	 * profileimg field in *Titleblock → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: titleblock.primary.profileimg
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	profileimg: prismic.ImageField<never>;
+
+	/**
+	 * keytext field in *Titleblock → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: titleblock.primary.keytext
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	keytext: prismic.KeyTextField;
+
+	/**
+	 * linkbutton field in *Titleblock → Primary*
+	 *
+	 * - **Field Type**: Link to Media
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: titleblock.primary.linkbutton
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	linkbutton: prismic.LinkToMediaField;
+}
+
+/**
  * Default variation for Titleblock Slice
  *
  * - **API ID**: `default`
@@ -168,7 +213,7 @@ export type ProfielSlice = prismic.SharedSlice<'profiel', ProfielSliceVariation>
  */
 export type TitleblockSliceDefault = prismic.SharedSliceVariation<
 	'default',
-	Record<string, never>,
+	Simplify<TitleblockSliceDefaultPrimary>,
 	never
 >;
 
@@ -208,6 +253,7 @@ declare module '@prismicio/client' {
 			ProfielSliceVariation,
 			ProfielSliceDefault,
 			TitleblockSlice,
+			TitleblockSliceDefaultPrimary,
 			TitleblockSliceVariation,
 			TitleblockSliceDefault
 		};
