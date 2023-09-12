@@ -12,15 +12,11 @@
 </main>
 
 <style>
-	body {
-		margin: 0px;
-	}
-
 	main {
 		width: 100%;
 		height: 100vh;
 		display: flex;
-		background-image: url(1732.jpg);
+		background-image: url(gradient-7258997_1920.png);
 		position: relative;
 	}
 
