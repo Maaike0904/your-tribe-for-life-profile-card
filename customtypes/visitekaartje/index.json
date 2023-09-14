@@ -19,6 +19,15 @@
 					"choices": {
 						"titleblock": {
 							"type": "SharedSlice"
+						},
+						"paragraphtext": {
+							"type": "SharedSlice"
+						},
+						"gitbutton": {
+							"type": "SharedSlice"
+						},
+						"profileimg": {
+							"type": "SharedSlice"
 						}
 					}
 				}

@@ -40,7 +40,11 @@ export type NavDocument<Lang extends string = string> = prismic.PrismicDocumentW
 	Lang
 >;
 
-type VisitekaartjeDocumentDataSlicesSlice = TitleblockSlice;
+type VisitekaartjeDocumentDataSlicesSlice =
+	| TitleblockSlice
+	| ParagraphtextSlice
+	| GitbuttonSlice
+	| ProfileimgSlice;
 
 /**
  * Content for Visitekaartje documents
@@ -108,56 +112,130 @@ export type VisitekaartjeDocument<Lang extends string = string> = prismic.Prismi
 export type AllDocumentTypes = NavDocument | VisitekaartjeDocument;
 
 /**
- * Primary content in *Profiel → Primary*
+ * Primary content in *Gitbutton → Primary*
  */
-export interface ProfielSliceDefaultPrimary {
+export interface GitbuttonSliceDefaultPrimary {
 	/**
-	 * Title field in *Profiel → Primary*
+	 * linkbutton field in *Gitbutton → Primary*
 	 *
-	 * - **Field Type**: Rich Text
+	 * - **Field Type**: Link
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: profiel.primary.title
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 * - **API ID Path**: gitbutton.primary.linkbutton
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	title: prismic.RichTextField;
-
-	/**
-	 * Img field in *Profiel → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: profiel.primary.img
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	img: prismic.ImageField<never>;
+	linkbutton: prismic.LinkField;
 }
 
 /**
- * Default variation for Profiel Slice
+ * Default variation for Gitbutton Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type ProfielSliceDefault = prismic.SharedSliceVariation<
+export type GitbuttonSliceDefault = prismic.SharedSliceVariation<
 	'default',
-	Simplify<ProfielSliceDefaultPrimary>,
+	Simplify<GitbuttonSliceDefaultPrimary>,
 	never
 >;
 
 /**
- * Slice variation for *Profiel*
+ * Slice variation for *Gitbutton*
  */
-type ProfielSliceVariation = ProfielSliceDefault;
+type GitbuttonSliceVariation = GitbuttonSliceDefault;
 
 /**
- * Profiel Shared Slice
+ * Gitbutton Shared Slice
  *
- * - **API ID**: `profiel`
- * - **Description**: Profiel
+ * - **API ID**: `gitbutton`
+ * - **Description**: Gitbutton
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type ProfielSlice = prismic.SharedSlice<'profiel', ProfielSliceVariation>;
+export type GitbuttonSlice = prismic.SharedSlice<'gitbutton', GitbuttonSliceVariation>;
+
+/**
+ * Primary content in *Paragraphtext → Primary*
+ */
+export interface ParagraphtextSliceDefaultPrimary {
+	/**
+	 * keytext field in *Paragraphtext → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: paragraphtext.primary.keytext
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	keytext: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Paragraphtext Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ParagraphtextSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<ParagraphtextSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *Paragraphtext*
+ */
+type ParagraphtextSliceVariation = ParagraphtextSliceDefault;
+
+/**
+ * Paragraphtext Shared Slice
+ *
+ * - **API ID**: `paragraphtext`
+ * - **Description**: Paragraphtext
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ParagraphtextSlice = prismic.SharedSlice<'paragraphtext', ParagraphtextSliceVariation>;
+
+/**
+ * Primary content in *Profileimg → Primary*
+ */
+export interface ProfileimgSliceDefaultPrimary {
+	/**
+	 * profileimg field in *Profileimg → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: profileimg.primary.profileimg
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	profileimg: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Profileimg Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ProfileimgSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<ProfileimgSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *Profileimg*
+ */
+type ProfileimgSliceVariation = ProfileimgSliceDefault;
+
+/**
+ * Profileimg Shared Slice
+ *
+ * - **API ID**: `profileimg`
+ * - **Description**: Profileimg
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ProfileimgSlice = prismic.SharedSlice<'profileimg', ProfileimgSliceVariation>;
 
 /**
  * Primary content in *Titleblock → Primary*
@@ -172,36 +250,6 @@ export interface TitleblockSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	title: prismic.RichTextField;
-
-	/**
-	 * profileimg field in *Titleblock → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: titleblock.primary.profileimg
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	profileimg: prismic.ImageField<never>;
-
-	/**
-	 * keytext field in *Titleblock → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: titleblock.primary.keytext
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	keytext: prismic.KeyTextField;
-
-	/**
-	 * linkbutton field in *Titleblock → Primary*
-	 *
-	 * - **Field Type**: Link to Media
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: titleblock.primary.linkbutton
-	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-	 */
-	linkbutton: prismic.LinkToMediaField;
 }
 
 /**
@@ -248,10 +296,18 @@ declare module '@prismicio/client' {
 			VisitekaartjeDocumentData,
 			VisitekaartjeDocumentDataSlicesSlice,
 			AllDocumentTypes,
-			ProfielSlice,
-			ProfielSliceDefaultPrimary,
-			ProfielSliceVariation,
-			ProfielSliceDefault,
+			GitbuttonSlice,
+			GitbuttonSliceDefaultPrimary,
+			GitbuttonSliceVariation,
+			GitbuttonSliceDefault,
+			ParagraphtextSlice,
+			ParagraphtextSliceDefaultPrimary,
+			ParagraphtextSliceVariation,
+			ParagraphtextSliceDefault,
+			ProfileimgSlice,
+			ProfileimgSliceDefaultPrimary,
+			ProfileimgSliceVariation,
+			ProfileimgSliceDefault,
 			TitleblockSlice,
 			TitleblockSliceDefaultPrimary,
 			TitleblockSliceVariation,

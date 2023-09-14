@@ -1,0 +1,26 @@
+{
+  "id": "paragraphtext",
+  "type": "SharedSlice",
+  "name": "Paragraphtext",
+  "description": "Paragraphtext",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "keytext": {
+          "type": "Text",
+          "config": {
+            "label": "keytext",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

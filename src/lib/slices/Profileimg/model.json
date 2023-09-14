@@ -1,0 +1,27 @@
+{
+  "id": "profileimg",
+  "type": "SharedSlice",
+  "name": "Profileimg",
+  "description": "Profileimg",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "profileimg": {
+          "type": "Image",
+          "config": {
+            "label": "profileimg",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "gitbutton",
+  "type": "SharedSlice",
+  "name": "Gitbutton",
+  "description": "Gitbutton",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "linkbutton": {
+          "type": "Link",
+          "config": {
+            "label": "linkbutton",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

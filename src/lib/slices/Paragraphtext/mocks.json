@@ -1,0 +1,14 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"keytext": {
+				"__TYPE__": "FieldContent",
+				"value": "cloud",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
