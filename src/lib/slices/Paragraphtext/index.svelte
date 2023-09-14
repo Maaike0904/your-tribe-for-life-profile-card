@@ -10,3 +10,11 @@
 <div data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
 	<p>{slice.primary.keytext}</p>
 </div>
+
+<style>
+	p {
+		font-family: 'Montserrat';
+		color: #4b0082;
+		size: 0.5em;
+	}
+</style>
