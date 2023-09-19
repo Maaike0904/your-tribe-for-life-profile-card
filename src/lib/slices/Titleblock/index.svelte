@@ -12,6 +12,6 @@
 <style>
 	h1 {
 		font-family: 'Montserrat';
-		color: #4b0082;
+		color: lightcoral;
 	}
 </style>

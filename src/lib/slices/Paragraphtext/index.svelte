@@ -14,7 +14,7 @@
 <style>
 	p {
 		font-family: 'Montserrat';
-		color: #4b0082;
+		color: lightcoral;
 		size: 0.5em;
 	}
 </style>

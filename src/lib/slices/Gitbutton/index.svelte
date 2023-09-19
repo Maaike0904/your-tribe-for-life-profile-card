@@ -4,8 +4,8 @@
 </script>
 
 <button>
+	<a href={slice.primary.linkbutton.url} />
 	<div data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-		<a href={slice.primary.linkbutton.url}> Bezoek mijn Github</a>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			class="icon icon-tabler icon-tabler-brand-github"
@@ -25,12 +25,13 @@
 
 <style>
 	button {
-		color: white;
+		color: lightyellow;
 		border: 0;
 		border-radius: 10px;
 		font-style: none;
 		font-family: 'Montserrat';
-		background-color: coral;
+		background-color: lightcoral;
 		list-style: none;
+		cursor: pointer;
 	}
 </style>
